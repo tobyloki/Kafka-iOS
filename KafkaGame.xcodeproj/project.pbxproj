@@ -11,6 +11,11 @@
 		FA54317B29A41B3B00314576 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54317A29A41B3B00314576 /* ContentView.swift */; };
 		FA54317D29A41B3C00314576 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54317C29A41B3C00314576 /* Assets.xcassets */; };
 		FA54318029A41B3C00314576 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA54317F29A41B3C00314576 /* Preview Assets.xcassets */; };
+		FA54318729A4305F00314576 /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54318629A4305F00314576 /* HTTP.swift */; };
+		FA54318A29A430A500314576 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = FA54318929A430A500314576 /* SwiftyJSON */; };
+		FA54318C29A430CF00314576 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54318B29A430CE00314576 /* Log.swift */; };
+		FA54318E29A4316900314576 /* StringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA54318D29A4316900314576 /* StringError.swift */; };
+		FA54319629A5548000314576 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = FA54319529A5548000314576 /* AlertToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,9 @@
 		FA54317A29A41B3B00314576 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA54317C29A41B3C00314576 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA54317F29A41B3C00314576 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA54318629A4305F00314576 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
+		FA54318B29A430CE00314576 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		FA54318D29A4316900314576 /* StringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA54318A29A430A500314576 /* SwiftyJSON in Frameworks */,
+				FA54319629A5548000314576 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +65,9 @@
 				FA54317A29A41B3B00314576 /* ContentView.swift */,
 				FA54317C29A41B3C00314576 /* Assets.xcassets */,
 				FA54317E29A41B3C00314576 /* Preview Content */,
+				FA54318629A4305F00314576 /* HTTP.swift */,
+				FA54318B29A430CE00314576 /* Log.swift */,
+				FA54318D29A4316900314576 /* StringError.swift */,
 			);
 			path = KafkaGame;
 			sourceTree = "<group>";
@@ -83,6 +96,10 @@
 			dependencies = (
 			);
 			name = KafkaGame;
+			packageProductDependencies = (
+				FA54318929A430A500314576 /* SwiftyJSON */,
+				FA54319529A5548000314576 /* AlertToast */,
+			);
 			productName = KafkaGame;
 			productReference = FA54317529A41B3B00314576 /* KafkaGame.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +128,10 @@
 				Base,
 			);
 			mainGroup = FA54316C29A41B3B00314576;
+			packageReferences = (
+				FA54318829A430A400314576 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				FA54319429A5548000314576 /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = FA54317629A41B3B00314576 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA54318E29A4316900314576 /* StringError.swift in Sources */,
+				FA54318729A4305F00314576 /* HTTP.swift in Sources */,
 				FA54317B29A41B3B00314576 /* ContentView.swift in Sources */,
+				FA54318C29A430CF00314576 /* Log.swift in Sources */,
 				FA54317929A41B3B00314576 /* KafkaGameApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +361,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA54318829A430A400314576 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FA54319429A5548000314576 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA54318929A430A500314576 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA54318829A430A400314576 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		FA54319529A5548000314576 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA54319429A5548000314576 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA54316D29A41B3B00314576 /* Project object */;
 }
